@@ -1,0 +1,42 @@
+.weather-details {
+  color: #FFF;
+  padding: 40px 0 0 40px;
+}
+
+.top-weather {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.temperature {
+  display: flex;
+  align-items: flex-start;
+}
+
+#temperature {
+  font-size: 6em;
+  margin: 0;
+}
+
+#degrees {
+  opacity: 0.8;
+  font-size: 2em;
+  position: relative;
+  top: 12px;
+  margin: 0;
+}
+
+#weather-icon {
+  position: relative;
+  bottom: 12px;
+  right: 12px;
+}
+
+.weather-infos {
+  margin-top: 20px;
+  div:nth-child(n) {
+    display: flex;
+    align-items: center;
+  }
+}

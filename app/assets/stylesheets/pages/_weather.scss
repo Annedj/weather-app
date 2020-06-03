@@ -1,0 +1,32 @@
+body {
+}
+
+.search-bar {
+  display: flex;
+  :nth-child(n) {
+    margin: 2px;
+  }
+  :nth-child(2) {
+    border-radius: 6px;
+  }
+}
+
+#address-input {
+  width: 25vw;
+  border-radius: 6px;
+  padding: 20px 10px;
+}
+
+.side-bar {
+  width: 30vw;
+}
+
+.weather-details {
+  width: 80vw;
+  height: 70vh;
+  background-color: #BF366D;
+  border-top-left-radius: 30px;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}

@@ -1,0 +1,29 @@
+<div class="weather-details">
+  <div class="top-weather">
+    <div>
+      <div class="temperature">
+        <h1 id="temperature">22</h1>
+        <p id="degrees">°C</p>
+      </div>
+      <h2>Mostly sunny</h2>
+    </div>
+    <%= image_tag "https://openweathermap.org/img/wn/10n@4x.png", id: "weather-icon", alt: "alttext" %>
+  </div>
+
+  <div class="weather-infos">
+    <div class="wind">
+      <%= image_tag "https://openweathermap.org/img/wn/50d@2x.png", alt: "alttext" %>
+      <p>3.6 km/h</p>
+    </div>
+    <div class="humidity">
+      <%= image_tag "https://openweathermap.org/img/wn/10n@2x.png", alt: "alttext" %>
+      <p>67%</p>
+    </div>
+    <div class="sun">
+      <%= image_tag "https://openweathermap.org/img/wn/01d@2x.png", alt: "alttext" %>
+      <p>05:36</p>
+      <%= image_tag "https://openweathermap.org/img/wn/01n@2x.png", alt: "alttext" %>
+      <p>19:43</p>
+    </div>
+  </div>
+</div>
