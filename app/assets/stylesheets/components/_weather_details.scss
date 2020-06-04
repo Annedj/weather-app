@@ -1,6 +1,6 @@
 .weather-details {
   color: #FFF;
-  padding: 40px 0 0 40px;
+  padding: 40px 0 0 60px;
 }
 
 .top-weather {
@@ -27,16 +27,36 @@
   margin: 0;
 }
 
+.medium-text {
+  font-weight: 300;
+}
+
 #weather-icon {
   position: relative;
   bottom: 12px;
-  right: 12px;
+  right: 30px;
 }
 
 .weather-infos {
   margin-top: 20px;
-  div:nth-child(n) {
+  > div {
     display: flex;
     align-items: center;
   }
+}
+
+.light-text {
+  opacity: 0.8;
+  font-size: 0.8em;
+  margin: 0;
+}
+
+.fa-icon {
+  font-size: 3em;
+  padding: 28px;
+}
+
+.fla-icon {
+  width: 100px;
+  padding: 28px;
 }

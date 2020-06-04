@@ -1,17 +1,17 @@
 <div class="top-bar">
   <div>
-    <h1>Hello!</h1>
-    <p class="today-date"><%= Date.today.strftime("%B %d, %A") %></p>
+    <h1 id="city">Hello!</h1>
+    <p class="today-date">Today's <%= Date.today.strftime("%B %d, %A") %>.</p>
   </div>
   <div class="search-bar">
     <input type="search" id="address-input" placeholder="Where do you live?" />
     <input type="submit" value="Get the weather" class="btn btn-primary ml-3">
   </div>
 </div>
+  <%= link_to 'Current location', '', class: 'm-4 btn btn-primary round', id: 'button' %>
 
 <div class="d-flex">
   <div class="side-bar">
-
   </div>
   <%= render 'components/weather_details' %>
 </div>

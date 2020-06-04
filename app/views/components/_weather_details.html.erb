@@ -5,25 +5,33 @@
         <h1 id="temperature">22</h1>
         <p id="degrees">°C</p>
       </div>
-      <h2>Mostly sunny</h2>
+      <h2 id='main-description'>Mostly sunny</h2>
+      <p class="medium-text" id="feels">Feels like 18°C</p>
     </div>
     <%= image_tag "https://openweathermap.org/img/wn/10n@4x.png", id: "weather-icon", alt: "alttext" %>
   </div>
 
   <div class="weather-infos">
-    <div class="wind">
-      <%= image_tag "https://openweathermap.org/img/wn/50d@2x.png", alt: "alttext" %>
-      <p>3.6 km/h</p>
+    <div id="wind">
+      <i class="fas fa-wind fa-icon"></i>
+      <div>
+        <p class='infos'>3.6 km/h</p>
+        <p class="light-text">Wind</p>
+      </div>
     </div>
-    <div class="humidity">
-      <%= image_tag "https://openweathermap.org/img/wn/10n@2x.png", alt: "alttext" %>
-      <p>67%</p>
+    <div id="humidity">
+      <%#= image_tag "https://openweathermap.org/img/wn/50n@2x.png", alt: "alttext" %>
+      <%= image_tag "water.svg", alt: "alttext", class: 'fla-icon' %>
+      <div>
+        <p class='infos'>67%</p>
+        <p class="light-text">Humidity</p>
+      </div>
     </div>
-    <div class="sun">
+    <div id="sun">
       <%= image_tag "https://openweathermap.org/img/wn/01d@2x.png", alt: "alttext" %>
-      <p>05:36</p>
+      <p class='infos'>5:36 AM</p>
       <%= image_tag "https://openweathermap.org/img/wn/01n@2x.png", alt: "alttext" %>
-      <p>19:43</p>
+      <p class='infos'>19:43 PM</p>
     </div>
   </div>
 </div>
