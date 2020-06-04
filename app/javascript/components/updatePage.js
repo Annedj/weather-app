@@ -13,7 +13,7 @@ const updateWeather = (response) => {
 
   temperature.innerText = `${Math.round(data.temp.day) - 273}`;
   mainDescription.innerText = data.weather[0].main;
-  feels.innerText = `Feels like ${data.feels_like.day} °C`;
+  feels.innerText = `Feels like ${Math.round(data.feels_like.day)- 273} °C`;
   weatherIcon.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`;
   wind.querySelector('.infos').innerText = data.wind_speed + " km/h";
   humidity.querySelector('.infos').innerText = data.humidity + "%";

@@ -3,29 +3,36 @@ p {
 }
 
 .top-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  margin: 38px 54px 24px 120px;
-  height: 15vh;
+  // display: flex;
+  // justify-content: space-between;
+  // align-items: flex-end;
+  margin: 38px 54px 24px 20vw;
 }
 
 .today-date {
   margin: 0;
 }
 
+#get-location {
+  position: relative;
+  left: 45px;
+}
+
+.btn {
+  border-radius: 6px
+}
+
 .search-bar {
   display: flex;
-  :nth-child(n) {
-    margin: 2px;
-  }
+  // :nth-child(n) {
+  //   margin: 2px;
+  // }
   :nth-child(2) {
-    border-radius: 6px;
   }
 }
 
 #address-input {
-  width: 25vw;
+  // width: 25vw;
   border-radius: 6px;
   padding: 20px 10px;
 }
