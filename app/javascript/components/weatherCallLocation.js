@@ -1,11 +1,15 @@
 import { updateWeather, updateCity } from './updatePage'
 
 const button = document.getElementById('get-location');
+const inputs = document.querySelector('.inputs');
 
-export const getWeather = () => {
-
+export const getWeatherLocation = () => {
   button.addEventListener('click', (event) => {
     event.preventDefault();
+    event.target.outerHTML = `<button class="btn btn-primary round mr-2" type="button" disabled>
+  <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+  Loading...
+</button>`;
 
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition((data) => {
@@ -13,8 +17,8 @@ export const getWeather = () => {
           fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${data.coords.latitude}&lon=${data.coords.longitude}&exclude=minutely,hourly&appid=51584be985ba7d5712771046299b7195`)
             .then((response) => response.json())
             .then(updateWeather)
+            .then(inputs.outerHTML = '')
         });
-        event.target.outerHTML = '';
       } else {
         button.insertAdjacentText('beforebegin', 'Geolocation is not supported by this browser.');
       };

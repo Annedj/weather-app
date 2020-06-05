@@ -2,7 +2,7 @@ const updateWeather = (response) => {
   const data = response.daily[0];
   const lang = window.navigator.userLanguage || window.navigator.language;
 
-  console.log('Hello from updateW: ', data);
+  console.log('Hello from updateW: ', data.weather[0].icon);
   const temperature = document.getElementById('temperature');
   const mainDescription = document.getElementById('main-description');
   const feels = document.getElementById('feels');
@@ -14,7 +14,12 @@ const updateWeather = (response) => {
   temperature.innerText = `${Math.round(data.temp.day) - 273}`;
   mainDescription.innerText = data.weather[0].main;
   feels.innerText = `Feels like ${Math.round(data.feels_like.day)- 273} °C`;
-  weatherIcon.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`;
+  if (`/${data.weather[0].icon}.svg`.width == 0) {
+    weatherIcon.src = `/${data.weather[0].icon}.svg`;
+  } else {
+    weatherIcon.src = `/${data.weather[0].icon.slice(0,2)}d.svg`;
+    // weatherIcon.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`;
+  }
   wind.querySelector('.infos').innerText = data.wind_speed + " km/h";
   humidity.querySelector('.infos').innerText = data.humidity + "%";
   sun[0].innerText = new Date(data.sunrise*1000).toLocaleTimeString(lang, {hour: "numeric", minute: "numeric"});
@@ -25,6 +30,10 @@ const updateWeather = (response) => {
 const updateCity = (data) => {
   const city = document.getElementById('city');
   city.innerText = data.city;
+};
+
+const onLoadEmptyDetails = () => {
+  const weather = document.querySelector('.weather-details');
 };
 
 export { updateWeather, updateCity }

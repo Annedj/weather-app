@@ -1,6 +1,21 @@
 .weather-details {
   color: #FFF;
-  padding: 40px 0 0 60px;
+  padding: 1.2em 0 0 2.4em;
+  margin-left: 0.6em;
+  background-color: $pink;
+  border-top-left-radius: 1.5em;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+}
+
+@media all and (min-width: 520px) {
+  .weather-details {
+    width: 85vw;
+    height: 72vh;
+    padding-left: 80px;
+    padding-top: 50px;
+  }
 }
 
 .top-weather {
@@ -33,8 +48,8 @@
 
 #weather-icon {
   position: relative;
-  bottom: 12px;
-  right: 30px;
+  width: 14em;
+  right: 1.6em;
 }
 
 .weather-infos {

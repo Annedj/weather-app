@@ -6,16 +6,33 @@ p {
   // display: flex;
   // justify-content: space-between;
   // align-items: flex-end;
-  margin: 38px 54px 24px 20vw;
+  margin: 2em 2em 1.4em 2em;
+}
+
+@media all and (min-width: 520px) {
+  .top-bar {
+    margin: 40px 0 0 60px;
+  }
 }
 
 .today-date {
   margin: 0;
 }
 
+.inputs {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  :nth-child(3) {
+    width: 35%;
+    margin-left: 35px;
+  }
+}
+
 #get-location {
-  position: relative;
-  left: 45px;
+  margin-right: 35px;
+  // position: relative;
+  // left: 45px;
 }
 
 .btn {
@@ -37,16 +54,3 @@ p {
   padding: 20px 10px;
 }
 
-.side-bar {
-  width: 30vw;
-}
-
-.weather-details {
-  width: 80vw;
-  height: 70vh;
-  background-color: #BF366D;
-  border-top-left-radius: 30px;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-}
