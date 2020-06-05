@@ -1,9 +1,10 @@
 import { updateWeather, updateCity } from './updatePage'
 
-const button = document.getElementById('get-location');
-const inputs = document.querySelector('.inputs');
 
 export const getWeatherLocation = () => {
+  const button = document.getElementById('get-location');
+  const inputs = document.querySelector('.inputs');
+
   button.addEventListener('click', (event) => {
     event.preventDefault();
     event.target.outerHTML = `<button class="btn btn-primary round mr-2" type="button" disabled>
