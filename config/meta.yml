@@ -1,0 +1,5 @@
+meta_product_name: "Weather"
+meta_title: "Today's Weather"
+meta_description: "The prettiest way to get the weather"
+meta_image: "cover.png" # should exist in `app/assets/images/`
+# twitter_account: "@product_twitter_account"   # required for Twitter Cards
