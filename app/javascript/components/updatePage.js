@@ -32,8 +32,4 @@ const updateCity = (data) => {
   city.innerText = data.city;
 };
 
-const onLoadEmptyDetails = () => {
-  const weather = document.querySelector('.weather-details');
-};
-
 export { updateWeather, updateCity }

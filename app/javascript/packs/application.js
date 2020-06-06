@@ -15,9 +15,11 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 import { initAutocomplete } from '../components/places';
 import { getWeatherLocation } from '../components/weatherCallLocation';
+import { getWeatherAddress } from '../components/weatherCallAddress';
 
 document.addEventListener('turbolinks:load', () => {
   // Call your functions here, e.g:
   initAutocomplete();
   getWeatherLocation();
+  getWeatherAddress();
 });
