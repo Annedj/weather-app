@@ -27,6 +27,6 @@ async function fetchCoords(address) {
 async function fetchWeather(coords) {
   const response = await fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${coords[1]}&lon=${coords[0]}&exclude=minutely,hourly&appid=51584be985ba7d5712771046299b7195`);
   const json = await response.json();
-  console.log(json);
+  console.log('From weatherAddress: ', json);
   return json;
 };
