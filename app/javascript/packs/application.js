@@ -14,8 +14,8 @@ import "bootstrap";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 import { initAutocomplete } from "../components/places";
-import getLocationWeather from "../components/getLocationWeather";
 import initialWeather from "../components/initialWeather";
+import getLocationWeather from "../components/getLocationWeather";
 import { getWeatherAddress } from "../components/weatherCallAddress";
 
 document.addEventListener("turbolinks:load", () => {

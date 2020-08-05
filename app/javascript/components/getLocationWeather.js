@@ -13,7 +13,7 @@ export default () => {
       geoLocationSuccess,
       geoLocationError
     );
-    document.getElementById('loading').outerHTML = `<button class='btn btn-primary round disabled mr-2'>Current location</button>`;
+    document.getElementById('loading').outerHTML = `<button class='btn btn-primary round disabled' id='get-location'>Current location</button>`;
   });
 };
 
