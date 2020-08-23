@@ -17,6 +17,7 @@ import { initAutocomplete } from "../components/places";
 import initialWeather from "../components/initialWeather";
 import getLocationWeather from "../components/getLocationWeather";
 import { getWeatherAddress } from "../components/weatherCallAddress";
+import weekWeather from "../components/weekWeather";
 
 document.addEventListener("turbolinks:load", () => {
   // Call your functions here, e.g:
@@ -24,4 +25,5 @@ document.addEventListener("turbolinks:load", () => {
   initialWeather();
   getLocationWeather();
   getWeatherAddress();
+  weekWeather();
 });

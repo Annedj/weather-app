@@ -1,8 +1,12 @@
 export default () => {
-  const days = document.querySelector('.days');
+  const days = document.querySelectorAll('.date-btn');
 
-  days.addEventListener('click', (event) => {
-    event.preventDefault();
+  if (days) {
+    days.forEach((day) => {
+      day.addEventListener('click', (event) => {
+        event.preventDefault();
 
-  });
+      });
+    });
+  };
 };
