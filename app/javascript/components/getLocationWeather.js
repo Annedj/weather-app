@@ -4,16 +4,18 @@ export default () => {
   const button = document.getElementById("get-location");
   const inputs = document.querySelector(".inputs");
 
-  button.addEventListener("click", (event) => {
-    event.preventDefault();
-    event.target.outerHTML = `<button class="btn btn-primary round mr-2" type="button" disabled>
-      <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>Loading...</button>`;
+  if (button) {
+    button.addEventListener("click", (event) => {
+      event.preventDefault();
+      event.target.outerHTML = `<button class="btn btn-primary round mr-2" type="button" disabled>
+        <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>Loading...</button>`;
 
-    navigator.geolocation.getCurrentPosition(
-      geoLocationSuccess(inputs),
-      geoLocationError(button)
-    );
-  });
+      navigator.geolocation.getCurrentPosition(
+        geoLocationSuccess(inputs),
+        geoLocationError(button)
+      );
+    });
+  }
 };
 
 const cityName = async (coordinates) => {
