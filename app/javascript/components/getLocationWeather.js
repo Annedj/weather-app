@@ -1,8 +1,8 @@
 import { updateWeather, updateCity } from "./updatePage";
 
 export default () => {
-  const button = document.getElementById("get-location");
-  const inputs = document.querySelector(".inputs");
+  const button = document.getElementById('get-location');
+  const inputs = document.querySelector('.inputs');
 
   if (button) {
     button.addEventListener("click", (event) => {
@@ -11,11 +11,15 @@ export default () => {
         <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>Loading...</button>`;
 
       navigator.geolocation.getCurrentPosition(
-        geoLocationSuccess(inputs),
-        geoLocationError(button)
+        geoLocationSuccess,
+        geoLocationError
       );
+      setTimeout(() => {
+        inputs.children[0].style.display = 'none';
+        inputs.children[1].style.display = 'none';
+      }, 2000);
     });
-  }
+  };
 };
 
 const cityName = async (coordinates) => {
@@ -32,13 +36,14 @@ const locationWeather = async (latitude, longitude) => {
   return await response.json();
 };
 
-const geoLocationSuccess = (inputs) => async (position) => {
+export const geoLocationSuccess = async (position) => {
+  console.log('Position: ', position);
   updateCity(await cityName(position.coords));
   updateWeather(
     await locationWeather(position.coords.latitude, position.coords.longitude)
   );
-  inputs.outerHTML = "";
 };
 
-const geoLocationError = (button) =>
-  button.insertAdjacentText("beforebegin", "Not available");
+export const geoLocationError = () =>
+  // button.insertAdjacentText("beforebegin", "Not available");
+  window.alert('Location not found');

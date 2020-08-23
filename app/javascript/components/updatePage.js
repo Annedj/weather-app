@@ -2,7 +2,7 @@ const updateWeather = (response) => {
   const data = response.daily[0];
   const lang = window.navigator.userLanguage || window.navigator.language;
 
-  console.log('Hello from updateW: ', data.weather[0].icon);
+  console.log('Hello from updatePage');
   const temperature = document.getElementById('temperature');
   const mainDescription = document.getElementById('main-description');
   const feels = document.getElementById('feels');

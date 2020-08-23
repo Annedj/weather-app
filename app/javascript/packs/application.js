@@ -14,12 +14,16 @@ import "bootstrap";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 import { initAutocomplete } from "../components/places";
+import initialWeather from "../components/initialWeather";
 import getLocationWeather from "../components/getLocationWeather";
 import { getWeatherAddress } from "../components/weatherCallAddress";
+import weekWeather from "../components/weekWeather";
 
 document.addEventListener("turbolinks:load", () => {
   // Call your functions here, e.g:
   initAutocomplete();
+  initialWeather();
   getLocationWeather();
   getWeatherAddress();
+  weekWeather();
 });
