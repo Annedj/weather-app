@@ -1,10 +1,10 @@
 .side-bar {
   background-color: $pink;
-  height: 70vh;
-  width: 25vw;
-  position: fixed;
-  bottom: 0;
-  left: 0;
+  // height: 70vh;
+  // width: 25vw;
+  // position: fixed;
+  // bottom: 0;
+  // left: 0;
   // border-top-right-radius: 1.5em;
   z-index: 10;
 }
@@ -17,7 +17,7 @@
 }
 
 .date-btn {
-  background-color: #F4F4F4;
+  background-color: #f4f4f4;
   padding: 6.5% 0 5% 25%;
   font-size: 1.2em;
   p {
@@ -28,8 +28,9 @@
 .date-btn:hover {
   text-decoration: none;
   background-color: $pink;
-  a, p {
-    color: #F4F4F4;
+  a,
+  p {
+    color: #f4f4f4;
     text-decoration: none;
   }
 }
@@ -44,7 +45,7 @@
 .active {
   background-color: $pink;
   p {
-    color: #F4F4F4;
+    color: #f4f4f4;
   }
 }
 

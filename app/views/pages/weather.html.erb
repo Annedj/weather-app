@@ -12,10 +12,13 @@
   </div>
 </div>
 
-<div class="d-flex">
-    <%= render 'components/side_bar_days' %>
-  <div class="weather-container">
-
-    <%= render 'components/weather_details' %>
+<div class="weather-container">
+  <div class="row">
+    <div class="col-2 p-0 m-0">
+      <%= render 'components/side_bar_days' %>
+    </div>
+    <div class="col-10 p-0 m-0">
+      <%= render 'components/weather_details' %>
+    </div>
   </div>
 </div>

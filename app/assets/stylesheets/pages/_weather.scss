@@ -3,7 +3,9 @@ p {
 }
 
 .top-bar {
-  margin: 4rem 0 1rem 4rem;
+  padding: 4rem 0 0 3rem;
+  margin-bottom: 2.8rem;
+  height: 25vh;
 }
 
 // 950 px for max width
@@ -28,6 +30,9 @@ p {
     :nth-child(odd) {
       margin-bottom: 0.5rem;
     }
+  }
+  .top-bar {
+    height: auto;
   }
 }
 

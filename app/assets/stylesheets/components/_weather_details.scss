@@ -1,19 +1,17 @@
-.weather-details {
-  color: #FFF;
-  padding: 1.2em 0 0 2.4em;
-  margin-left: 0.6em;
-  background-color: $pink;
-  // border-top-left-radius: 1.5em;
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  width: 75%;
-  height: 70%;
+.weather-container {
+  height: 70vh;
 }
 
-.weather-container {
-  width: 80vw;
-  height: 65vh;
+.weather-details {
+  color: #fff;
+  padding: 1.2em 0 0 2.4em;
+  background-color: $pink;
+  // border-top-left-radius: 1.5em;
+  // position: fixed;
+  // bottom: 0;
+  // right: 0;
+  // width: 70%;
+  height: 70vh;
 }
 
 @media all and (min-width: 520px) {
