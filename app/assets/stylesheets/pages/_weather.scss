@@ -3,9 +3,9 @@ p {
 }
 
 .top-bar {
-  padding: 4rem 0 0 3rem;
-  margin-bottom: 2.8rem;
-  height: 25vh;
+  padding: 3rem 3rem 3rem 3rem;
+  // margin-bottom: 2.8rem;
+  // height: 25vh;
 }
 
 // 950 px for max width
@@ -13,7 +13,7 @@ p {
 .inputs {
   display: flex;
   align-items: center;
-  margin: 2rem 0;
+  margin-top: 2rem;
   :nth-child(n) {
     margin-right: 0.5rem;
   }

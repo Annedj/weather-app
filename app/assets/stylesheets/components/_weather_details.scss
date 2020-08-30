@@ -1,17 +1,16 @@
 .weather-container {
-  height: 70vh;
+  // height: 70vh;
 }
 
 .weather-details {
   color: #fff;
-  padding: 1.2em 0 0 2.4em;
+  padding: 1.4rem 0 1rem 2.4rem;
   background-color: $pink;
   // border-top-left-radius: 1.5em;
   // position: fixed;
   // bottom: 0;
   // right: 0;
-  // width: 70%;
-  height: 70vh;
+  // height: 70%;
 }
 
 @media all and (min-width: 520px) {
