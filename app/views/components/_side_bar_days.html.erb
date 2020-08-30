@@ -1,36 +1,36 @@
 <div class="side-bar">
   <ul class='days'>
-    <li class="date-btn active">
+    <li class="date-btn active" id="0">
       <%= link_to '' do %>
         <p><%= Date.today.strftime("%B %d") %></p>
         <p class='day'><%= Date.today.strftime("%A") %></p>
       <% end %>
     </li>
-    <li class="date-btn radius-top">
+    <li class="date-btn radius-top" id="1">
       <%= link_to '' do %>
         <p><%= (Date.today + 1).strftime("%B %d") %></p>
         <p class='day'><%= (Date.today + 1).strftime("%A") %></p>
       <% end %>
     </li>
-    <li class="date-btn">
+    <li class="date-btn" id="2">
       <%= link_to '' do %>
         <p><%= (Date.today + 2).strftime("%B %d") %></p>
         <p class='day'><%= (Date.today + 2).strftime("%A") %></p>
       <% end %>
     </li>
-    <li class="date-btn">
+    <li class="date-btn" id="3">
       <%= link_to '' do %>
         <p><%= (Date.today + 3).strftime("%B %d") %></p>
         <p class='day'><%= (Date.today + 3).strftime("%A") %></p>
       <% end %>
     </li>
-    <li class="date-btn">
+    <li class="date-btn" id="4">
       <%= link_to '' do %>
         <p><%= (Date.today + 4).strftime("%B %d") %></p>
         <p class='day'><%= (Date.today + 4).strftime("%A") %></p>
       <% end %>
     </li>
-    <li class="date-btn">
+    <li class="date-btn" id="5">
       <%= link_to '' do %>
         <p><%= (Date.today + 5).strftime("%B %d") %></p>
         <p class='day'><%= (Date.today + 5).strftime("%A") %></p>

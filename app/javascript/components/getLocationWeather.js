@@ -14,10 +14,8 @@ export default () => {
         geoLocationSuccess,
         geoLocationError
       );
-      console.log(inputs);
       setTimeout(() => {
         inputs.children[0].style.display = "none";
-        // inputs.children[1].style.display = "none";
       }, 2000);
     });
   }
@@ -38,13 +36,10 @@ const locationWeather = async (latitude, longitude) => {
 };
 
 export const geoLocationSuccess = async position => {
-  console.log("Position: ", position);
   updateCity(await cityName(position.coords));
   updateWeather(
     await locationWeather(position.coords.latitude, position.coords.longitude)
   );
 };
 
-export const geoLocationError = () =>
-  // button.insertAdjacentText("beforebegin", "Not available");
-  window.alert("Location not found");
+export const geoLocationError = () => window.alert("Location not found");
