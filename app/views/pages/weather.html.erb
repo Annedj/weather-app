@@ -4,14 +4,12 @@
     <p class="today-date">Today's <%= Date.today.strftime("%B %d, %A") %>.</p>
   </div>
   <div class="inputs">
-    <%= link_to 'Current location', '', class: 'btn btn-primary round', id: 'get-location' %>
-    <p>or </p>
+    <%= link_to '', class: 'btn btn-primary round', id: 'get-location' do %>
+      <i class="fas fa-location-arrow"></i>
+    <% end %>
     <input type="search" id="address-input" placeholder="Enter a city name" />
-    <input type="submit" id="address-btn" value="Get the weather" class="btn btn-primary ml-3">
+    <input type="submit" id="address-btn" value="Get the weather" class="btn btn-primary">
   </div>
-<!--   <div class="search-bar">
-    <p>Another city?</p>
-  </div> -->
 </div>
 
 <div class="d-flex">

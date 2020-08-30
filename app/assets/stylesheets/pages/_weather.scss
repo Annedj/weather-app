@@ -3,15 +3,31 @@ p {
 }
 
 .top-bar {
-  // display: flex;
-  // justify-content: space-between;
-  // align-items: flex-end;
-  // margin: 2em 2em 1.4em 2em;
+  margin: 4rem 0 1rem 4rem;
 }
 
-@media all and (min-width: 520px) {
-  .top-bar {
-    margin: 40px 0 0 60px;
+// 950 px for max width
+
+.inputs {
+  display: flex;
+  align-items: center;
+  margin: 2rem 0;
+  :nth-child(n) {
+    margin-right: 0.5rem;
+  }
+  :nth-child(2) {
+    // margin-right: 1rem;
+    width: auto;
+  }
+}
+
+@media (max-width: 950px) {
+  .inputs {
+    flex-direction: column;
+    align-items: flex-start;
+    :nth-child(odd) {
+      margin-bottom: 0.5rem;
+    }
   }
 }
 
@@ -19,26 +35,14 @@ p {
   margin: 0;
 }
 
-.inputs {
-  display: flex;
-  align-items: center;
-  margin-top: 20px;
-  :nth-child(2) {
-    margin-right: 35px;
-  }
-  :nth-child(3) {
-    width: 35%;
-  }
-}
-
 #get-location {
-  margin-right: 35px;
-  // position: relative;
-  // left: 45px;
+  i {
+    margin: 0;
+  }
 }
 
 .btn {
-  border-radius: 6px
+  border-radius: 6px;
 }
 
 .search-bar {
@@ -55,4 +59,3 @@ p {
   border-radius: 6px;
   padding: 7px 10px;
 }
-
